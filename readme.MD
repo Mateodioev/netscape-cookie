@@ -7,7 +7,7 @@ composer require mateodioev/netscape-cookie
 
 ## Usage
 
-```
+```php
 use Mateodioev\NetscapeCookie\{Config, Cookie, FileHandler};
 
 $cookieJar = new FileHandler((new Config)
