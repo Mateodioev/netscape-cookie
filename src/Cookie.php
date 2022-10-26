@@ -81,6 +81,10 @@ class Cookie
   public function get(): string
   {
     $cookie = '';
+
+    if ($this->cookie['httpOnly'] === 'TRUE') {
+      $this->cookie['name'] = '#HttpOnly_' . $this->cookie['name'];
+    }
     foreach ($this->cookie as $value) {
       $cookie .= $value . "\t";
     }
