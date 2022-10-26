@@ -1,0 +1,13 @@
+{
+    "name": "mateodioev/netscape-cookie",
+    "description": "Create cookie files using netscape format",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Mateodioev\\NetscapeCookie\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {}
+}
