@@ -6,6 +6,8 @@ use function trim;
 
 class Cookie
 {
+  public const HTTP_ONLY = '#HttpOnly_.';
+
   public array $cookie = [
     'domain' => '',
     'includeSubDomains' => 'FALSE',
@@ -82,8 +84,8 @@ class Cookie
   {
     $cookie = '';
 
-    if ($this->cookie['httpOnly'] === 'TRUE') {
-      $this->cookie['name'] = '#HttpOnly_' . $this->cookie['name'];
+    if ($this->cookie['httpOnly'] == 'TRUE') {
+      $this->cookie['domain'] = self::HTTP_ONLY . $this->cookie['name'];
     }
     foreach ($this->cookie as $value) {
       $cookie .= $value . "\t";
